@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to Pride API Documentation! &mdash; Pride API Documention 1.0 documentation</title>
+  <title>Introduction &mdash; Pride API Documention 1.0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction" href="introduction.html" /> 
+    <link rel="prev" title="Welcome to Pride API Documentation!" href="index.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -49,7 +49,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> Pride API Documention
+            <a href="index.html" class="icon icon-home"> Pride API Documention
           
 
           
@@ -79,8 +79,8 @@
               
             
             
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
 </ul>
 
             
@@ -95,7 +95,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Pride API Documention</a>
+          <a href="index.html">Pride API Documention</a>
         
       </nav>
 
@@ -124,15 +124,15 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#">Docs</a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Welcome to Pride API Documentation!</li>
+      <li>Introduction</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/introduction.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -145,25 +145,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welcome-to-pride-api-documentation">
-<h1>Welcome to Pride API Documentation!<a class="headerlink" href="#welcome-to-pride-api-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to the PRIDE API Documentation. This tutorial will walk you through the initial steps
-to query and use PRIDE Restful API, and how programmatically access to PRIDE data.</p>
-<div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="sidebar">
+<p class="first sidebar-title">API Browser Quick Guide</p>
+<p class="sidebar-subtitle"><strong>It can make your life easier</strong> if you want to explore by yourself our api:</p>
+<ul class="last simple">
+<li>Please visit our <a class="reference external" href="https://www.ebi.ac.uk/pride/ws/archive/">Swagger docs</a></li>
 </ul>
 </div>
+<p>A hypermedia API provides an entry point to the API, which contains hyperlinks the clients can follow.
+Just like a human user of a regular website, who knows the initial URL of a website and then follows hyperlinks to navigate through the site.
+This has the advantage that the client only needs to understand how to detect and follow links.
+The URLs (apart from the inital entry point) and other details of the API can change without breaking the client.</p>
+<p>The entry point to the Plone RESTful API is the portal root.
+The client can ask for a <span class="xref std std-term">REST</span> API response by setting the <code class="docutils literal notranslate"><span class="pre">'Accept'</span></code> HTTP header to <code class="docutils literal notranslate"><span class="pre">'application/json'</span></code>:</p>
+<div class="http-example docutils container">
+<div class="http-example-http docutils container" id="id1">
+<p class="caption"><span class="caption-text">http</span></p>
+<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="nf">GET</span> <span class="nn">/Plone/front-page</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">localhost:8080</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
+<span class="na">Authorization</span><span class="o">:</span> <span class="l">Basic YWRtaW46YWRtaW4=</span>
+</pre></div>
 </div>
-<div class="section" id="appendix-indices-and-tables">
-<h2>Appendix, Indices and tables<a class="headerlink" href="#appendix-indices-and-tables" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
 </div>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-</ul>
+<div class="http-example-curl docutils container" id="id2">
+<p class="caption"><span class="caption-text">curl</span></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -i http://localhost:8080/Plone/front-page -H <span class="s1">&#39;Accept: application/json&#39;</span> --user admin:admin
+</pre></div>
+</div>
+</div>
+<div class="http-example-python-requests docutils container" id="id3">
+<p class="caption"><span class="caption-text">python-requests</span></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://localhost:8080/Plone/front-page&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">},</span> <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">,</span> <span class="s1">&#39;admin&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -175,8 +193,8 @@ to query and use PRIDE Restful API, and how programmatically access to PRIDE dat
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+        <a href="index.html" class="btn btn-neutral" title="Welcome to Pride API Documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
