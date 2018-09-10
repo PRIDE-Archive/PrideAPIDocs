@@ -81,8 +81,10 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hyperlinks.html">Hyperlinks</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">List of Objects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="hyperlinks.html">Hyperlinks</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Hyperlinks in Lists</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -127,6 +129,8 @@
   <ul class="wy-breadcrumbs">
     
       <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="hyperlinks.html">Hyperlinks</a> &raquo;</li>
         
       <li>List of Objects</li>
     
@@ -175,6 +179,19 @@ page: {
 }
 </pre></div>
 </div>
+<p>The page in defined by the parameters:</p>
+<ul class="simple">
+<li><strong>pageSize</strong> : Number of objects in the list.</li>
+<li><strong>page</strong> : Number of the page.</li>
+</ul>
+<p>The <em>links</em> provide a way to navigate the list of paginated objects:</p>
+<ul class="simple">
+<li><em>self</em> : Is a link to the current list of objects (e.g. projects, files, proteins )</li>
+<li><em>next</em> : Is a link to the next set of objects (next page).</li>
+<li><em>previous</em>: Is a link to the previous set of objects (previous page).</li>
+<li><em>first</em> : Is a list ot the first set of objects (first page).</li>
+<li><em>last</em> : Is a list ot the last set of objects (last page).</li>
+</ul>
 </div>
 
 
