@@ -1,20 +1,40 @@
-.. Pride API Documention documentation master file, created by
-   sphinx-quickstart on Mon Sep 10 09:55:00 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to Pride API Documention's documentation!
+Welcome to Pride API Documentation!
 =================================================
 
+Welcome to the PRIDE API Documentation. This tutorial will walk you through the initial steps
+to query and use PRIDE Restful API, and how programmatically access to PRIDE data.
+
+Contents
+--------
+
 .. toctree::
+   :maxdepth: 1
+
+   introduction
+   .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+
+   authentication
+   exploring
+   content
+   history
+   batching
+   comments
+   copymove
+   expansion
+   actions
+   workflow
+   locking
+
+.. include:: ../../README.rst
 
 
+Appendix, Indices and tables
+----------------------------
 
-Indices and tables
-==================
+.. toctree::
+
+   http-status-codes
+   glossary
 
 * :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
