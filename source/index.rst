@@ -14,17 +14,8 @@ Contents
    .. toctree::
    :maxdepth: 2
 
+   hyperlinks
    authentication
-   exploring
-   content
-   history
-   batching
-   comments
-   copymove
-   expansion
-   actions
-   workflow
-   locking
 
 .. include:: ../../README.rst
 

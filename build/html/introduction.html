@@ -154,31 +154,27 @@
 <li>Please visit our <a class="reference external" href="https://www.ebi.ac.uk/pride/ws/archive/">Swagger docs</a></li>
 </ul>
 </div>
-<p>A hypermedia API provides an entry point to the API, which contains hyperlinks the clients can follow.
-Just like a human user of a regular website, who knows the initial URL of a website and then follows hyperlinks to navigate through the site.
-This has the advantage that the client only needs to understand how to detect and follow links.
-The URLs (apart from the inital entry point) and other details of the API can change without breaking the client.</p>
-<p>The entry point to the Plone RESTful API is the portal root.
-The client can ask for a <span class="xref std std-term">REST</span> API response by setting the <code class="docutils literal notranslate"><span class="pre">'Accept'</span></code> HTTP header to <code class="docutils literal notranslate"><span class="pre">'application/json'</span></code>:</p>
+<p>The PRIDE Archive API provides a Restful entry point to retrieve all data from PRIDE Archive database. The API provides hyperlinks the clients can follow to navigate and search
+in the resource. Just like a human user of a regular website, who knows the initial URL of a website and then follows hyperlinks to navigate through the site.</p>
+<p>A simple call to PRIDE Archive API docs will provide all the entry points in the web service:</p>
 <div class="http-example docutils container">
 <div class="http-example-http docutils container" id="id1">
 <p class="caption"><span class="caption-text">http</span></p>
-<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="nf">GET</span> <span class="nn">/Plone/front-page</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="o">:</span> <span class="l">localhost:8080</span>
+<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="nf">GET</span> <span class="nn">api-docs</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">www.ebi.ac.uk/pride/ws/archive/</span>
 <span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
-<span class="na">Authorization</span><span class="o">:</span> <span class="l">Basic YWRtaW46YWRtaW4=</span>
 </pre></div>
 </div>
 </div>
 <div class="http-example-curl docutils container" id="id2">
 <p class="caption"><span class="caption-text">curl</span></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -i http://localhost:8080/Plone/front-page -H <span class="s1">&#39;Accept: application/json&#39;</span> --user admin:admin
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -i http://www.ebi.ac.uk/pride/ws/archive/api-docs -H <span class="s1">&#39;Accept: application/json&#39;</span>
 </pre></div>
 </div>
 </div>
 <div class="http-example-python-requests docutils container" id="id3">
 <p class="caption"><span class="caption-text">python-requests</span></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://localhost:8080/Plone/front-page&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">},</span> <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">,</span> <span class="s1">&#39;admin&#39;</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://www.ebi.ac.uk/pride/ws/archive/api-docs&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">})</span>
 </pre></div>
 </div>
 </div>

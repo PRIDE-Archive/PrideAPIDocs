@@ -7,17 +7,13 @@ Introduction
    * Please visit our `Swagger docs <https://www.ebi.ac.uk/pride/ws/archive/>`_
 
 
-A hypermedia API provides an entry point to the API, which contains hyperlinks the clients can follow.
-Just like a human user of a regular website, who knows the initial URL of a website and then follows hyperlinks to navigate through the site.
-This has the advantage that the client only needs to understand how to detect and follow links.
-The URLs (apart from the inital entry point) and other details of the API can change without breaking the client.
+The PRIDE Archive API provides a Restful entry point to retrieve all data from PRIDE Archive database. The API provides hyperlinks the clients can follow to navigate and search
+in the resource. Just like a human user of a regular website, who knows the initial URL of a website and then follows hyperlinks to navigate through the site.
 
-The entry point to the Plone RESTful API is the portal root.
-The client can ask for a :term:`REST` API response by setting the ``'Accept'`` HTTP header to ``'application/json'``:
+A simple call to PRIDE Archive API docs will provide all the entry points in the web service:
 
 .. http:example:: curl python-requests
 
-   GET /Plone/front-page HTTP/1.1
-   Host: localhost:8080
+   GET api-docs HTTP/1.1
+   Host: www.ebi.ac.uk/pride/ws/archive/
    Accept: application/json
-   Authorization: Basic YWRtaW46YWRtaW4=

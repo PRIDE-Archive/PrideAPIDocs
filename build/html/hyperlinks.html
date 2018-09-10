@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Hyperlinks &mdash; Pride API Documention 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinxcontrib-httpexample.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="List of Objects" href="lists.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Pride API Documention
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hyperlinks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lists.html">Hyperlinks in Lists</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Pride API Documention</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Hyperlinks</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/hyperlinks.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hyperlinks">
+<h1>Hyperlinks<a class="headerlink" href="#hyperlinks" title="Permalink to this headline">¶</a></h1>
+<p>A hypermedia API provides an entry point to the API, which contains hyperlinks the clients can follow. Just like a human user of a regular website, who knows the initial URL of a website and then follows hyperlinks to navigate through the site. This has the advantage that the client only needs to understand how to detect and follow links. The URLs (apart from the initial entry point) and other details of the API can change without breaking the client.</p>
+<p>For example, when we <em>query</em> the projects entry point, the end of the call returns the hyperlinks:</p>
+<div class="http-example docutils container">
+<div class="http-example-http docutils container" id="id1">
+<p class="caption"><span class="caption-text">http</span></p>
+<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="nf">GET</span> <span class="nn">projects</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">www.ebi.ac.uk/pride/ws/archive/</span>
+<span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
+</pre></div>
+</div>
+</div>
+<div class="http-example-curl docutils container" id="id2">
+<p class="caption"><span class="caption-text">curl</span></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -i http://www.ebi.ac.uk/pride/ws/archive/projects -H <span class="s1">&#39;Accept: application/json&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="http-example-python-requests docutils container" id="id3">
+<p class="caption"><span class="caption-text">python-requests</span></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://www.ebi.ac.uk/pride/ws/archive/projects&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The first part of the result response contains the PRIDE projects:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+   _embedded: {
+       projects: [
+            {
+              accession: &quot;PRD000001&quot;,
+              title: &quot;COFRADIC proteome of unstimulated human blood platelets&quot;,
+              additionalAttributes: null,
+              projectDescription: &quot;Not available&quot;,
+              sampleProcessingProtocol: &quot;Not available&quot;,
+              dataProcessingProtocol: &quot;Not available&quot;,
+              projectTags: [ ],
+              keywords: [&quot;Not available&quot;],
+              doi: null,
+              submissionDate: &quot;2004-01-01&quot;,
+              publicationDate: &quot;2005-12-09&quot;,
+              updatedDate: null,
+              submitters: [
+                  {
+                    title: &quot;Mr&quot;,
+                    affiliation: &quot;HUPO Plasma Proteome Project&quot;,
+                    email: &quot;lennart.martens@UGent.be&quot;
+                  }
+              ],
+              labPIs: [ ],
+              affiliations: [
+                    &quot;HUPO Plasma Proteome Project&quot;
+              ],
+              instruments: [
+                {
+                  accession: &quot;MS:1000031&quot;,
+                  name: &quot;instrument model&quot;,
+                  value: &quot;Micromass Q-TOF I&quot;,
+                  cvLabel: &quot;MS&quot;,
+                  id: &quot;MS:1000031&quot;
+              }],
+              softwares: [
+                {
+                  accession: &quot;MS:1000531&quot;,
+                  name: &quot;software&quot;,
+                  value: null,
+                  cvLabel: &quot;MS&quot;,
+                  id: &quot;MS:1000531&quot;
+                }
+              ]
+       ...
+</pre></div>
+</div>
+<p>The last part of the each <strong>Project Object</strong> response contains the <em>hyperlinks</em> that allows to navigate each methods of an object:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>_links: {
+     self: {
+          href: &quot;http://www.ebi.ac.uk/pride/ws/archive/projects/PRD000001&quot;
+     },
+     files: {
+          href: &quot;http://www.ebi.ac.uk/pride/ws/archive/projects/PRD000001/files?filter=&amp;pageSize=100&amp;page=0&quot;
+     }
+ }
+</pre></div>
+</div>
+<p>The <em>self</em> hyperlink is an entry point to the full information of the <strong>Project</strong> including all the data for the files, the _files_ entry point only provided the list of files that belongs to the <strong>Project</strong>.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lists.html">Hyperlinks in Lists</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lists.html" class="btn btn-neutral float-right" title="List of Objects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Yasset Perez-Riverol.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/sphinxcontrib-httpexample.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .admonition-title").show();
+        $(".toggle .admonition-title").click(function() {
+            $(this).parent().children().not(".admonition-title").toggle(400);
+            $(this).parent().children(".admonition-title").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>
