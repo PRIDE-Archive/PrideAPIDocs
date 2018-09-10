@@ -21,6 +21,8 @@ if [ "$1" != "dry" ]; then
     git config user.email "$EMAIL"
 fi
 
+pwd
+
 # Copy in the HTML.  You may want to change this with your documentation path.
 cp -R ../$REPO/build/html/* ./
 
