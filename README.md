@@ -1,6 +1,8 @@
 PRIDE API Documentation
 =======================
 
+[![Build Status](https://travis-ci.org/PRIDE-Archive/PrideAPIDocs.svg?branch=master)](https://travis-ci.org/PRIDE-Archive/PrideAPIDocs)
+
 ## How to setup
 
 This assumes that you're setting up a repository with only Sphinx (no code). If you're not doing that, you'll need to modify some stuff here, using your best judgment.
