@@ -15,7 +15,6 @@ Contents
    :maxdepth: 2
 
    hyperlinks
-   authentication
 
 .. include:: ../../README.rst
 
